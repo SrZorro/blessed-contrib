@@ -336,6 +336,18 @@ note: only png images are supported
    , data:
       [ [1, 2, 3]
       , [4, 5, 6] ]})
+
+   table.on("move", (index) => {
+      screen.log(`Moved cursor to ${index}`)
+   })
+
+   table.on("select", (index) => {
+      screen.log(`Selected element at ${index}`)
+   })
+
+   table.on("cancel", () => {
+      screen.log("Cancel button pressed")
+   })
 `````
 
 ### Tree
